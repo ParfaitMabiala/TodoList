@@ -10,34 +10,30 @@
     <title>Todo List</title>
 </head>
 <body>
-    
-    <div class="TudoList">
-        <h1>Todo List</h1>
-        <div class="mode">
-            <p>Mode</p>
-            <button Dark="darkMode">🌙</button>
-            <button Light="lightMode">☀</button>
-        </div>
+    <header>
         
-    </div>    
-    <section classe = "addTasks">
-        <div class = "task">
-            <div class = "content">
-                <h5>Add Task</h5>
-                <input type="text" class="text" value="Enter your task here">
-                <button class="add">Add</button>
-                <h4>Has to be done</h4>
-            </div>
-            <div class="btnAction">
-                <p id="task1">Manger</p>
-                <button class="Done">Done</button>
-                <button class="Delete">Delete</button>
-                <button class="Edit">Edit</button>
-            </div>
+    </header>
+    <div class="head">
+        <h1>Todo List</h1> 
+        
+        
+        
+    </div>
+      
+    <div class="contentToAdd">
+        <input id="inputText" type="text" value="Add task"> 
+        <button id="add">Add</button> 
+    </div>
 
-        </div>
+    <div class="listTask">
+        <h3>Task</h3>
+        <div id="tasks">
+            <input class="text" type="text" value="my task added">
+            <button id="Done">Done</button>
+            <button id="Delete">Delete</button>
+        </div>     
+    </div>
 
-    </section>
 </body>
 <script src="./script.js"></script>
 </html>

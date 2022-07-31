@@ -3,33 +3,96 @@
     src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 }
 
-
+*{
+    box-sizing: border-box;
+    margin: 5px;
+}
 
 body{
-    font-family: "poppins";
     display: flex;
     flex-direction: column;
-    align-items: center;
+    min-height: 100vh;
+    background: dimgray;
+    
+   
 }
 
-.mode{
-    display: flex;
-    justify-content: flex-end;
+.header{
+    
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+   
 }
-
-.GlobTudolist{
-
+    
+.head{
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 2px solid blue;
+    color: white;
+ }
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.button{
+    transition: all 0.3s ease 0s;
+}
+
+.button :hover{
+    background-color: aquamarine;
+    box-shadow: rgb(108, 104, 104);
+}
+
+#inputText{
+
+    border-radius: 20px;
+    background: rgb(229, 219, 219);
+    font-size: 1rem;
+}
+
+#add{
+    border-radius: 20px;
+    background-color: rgb(137, 159, 212);
+    width: 50px;
+    transform: translateX(-26px);
+    cursor: pointer;
+    transition-duration: 0.4s;   
+    width:50%; 
+    touch-action: manipulation;
+}
+
+
+#Done{
+    border-radius: 20px;
+    background: white;
+}
+
+#Delete{
+    border-radius: 20px;
+    background: white;
+}
+
+.contentToAdd{
+    display: flex;
+    justify-content: left;
+    transform: translateY(8px);
 
 }
 
-.btnAction{
+.task{
+    display: flex;
+    justify-content: left;
+}
+
+.listTask {
 
     display: flex;
     flex-direction: column;
-    justify-content: right;
-
+    justify-content: space-between;
+   
+    
 }
