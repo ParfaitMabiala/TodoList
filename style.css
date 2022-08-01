@@ -1,98 +1,178 @@
 @font-face {
-    font-family: "Poppins";
-    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
 }
 
-*{
-    box-sizing: border-box;
-    margin: 5px;
+* {
+  box-sizing: border-box;
+  margin: 5px;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: dimgray;
-    
-   
+body {
+  display: flex;
+  flex-direction: column;
+  background: dimgray;
 }
 
-.header{
-    
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-   
+.head {
+  display: flex;
+  justify-content: center;
+  color: white;
 }
-    
-.head{
-    display: flex;
-    justify-content: center;
-    color: white;
- }
-
-input, button{
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
+.contentToAdd {
+  width: 700px;
+  margin: 2% auto;
+  background-color: beige;
 }
-
-.button{
-    transition: all 0.3s ease 0s;
+.inputVal {
+  display: flex;
+  justify-content: space-between;
 }
-
-.button :hover{
-    background-color: aquamarine;
-    box-shadow: rgb(108, 104, 104);
-}
-
-#inputText{
-
-    border-radius: 20px;
-    background: rgb(229, 219, 219);
-    font-size: 1rem;
-}
-
-#add{
-    border-radius: 20px;
-    background-color: rgb(137, 159, 212);
-    width: 50px;
-    transform: translateX(-26px);
-    cursor: pointer;
-    transition-duration: 0.4s;   
-    width:50%; 
-    touch-action: manipulation;
-}
-
-
-#Done{
-    border-radius: 20px;
-    background: white;
-}
-
-#Delete{
-    border-radius: 20px;
-    background: white;
-}
-
-.contentToAdd{
-    display: flex;
-    justify-content: left;
-    transform: translateY(8px);
-
-}
-
-.task{
-    display: flex;
-    justify-content: left;
+#inputText {
+  width: 435px;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgb(229, 219, 219);
 }
 
 .listTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 693px;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   
-    
+.button {
+  transition: all 0.3s ease 0s;
+}
+
+.button :hover {
+  background-color: aquamarine;
+  box-shadow: rgb(108, 104, 104);
+}
+
+#add {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 10px 77px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#add:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 92%;
+}
+
+#add:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  #add {
+    padding: 10px 67px;
+  }
+}
+
+#Done {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+#Done:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#Done:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#Delete {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+#Delete:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#Delete:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.task {
+  display: flex;
+  justify-content: left;
+}
+
+.button {
 }
